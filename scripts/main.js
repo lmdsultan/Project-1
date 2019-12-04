@@ -1,6 +1,10 @@
 let counter = 0
 let timeSeconds = 0
 let endGame = true
+// let pla = {
+//     X: 0,
+//     O: 0
+// }
 
 window.setInterval(function () {
     timeSeconds++
@@ -11,13 +15,14 @@ window.setInterval(function () {
 $('.boxs').one('click', function (event) {
     counter++
     if (counter % 2 == 0) {
-        $(event.target).text('X') 
+        $(event.target).text('X')
         $('Audio#xs')[0].play()
-        
+
     } else {
         $(event.target).text('O')
         $('Audio#xs')[0].play()
     }
+
     function checkWin() {
         if (($("#0").text() === $("#1").text()) && ($("#0").text() === $("#2").text()) && ($("#0").text() !== "")) {
             $('#0,#1,#2').css('background', '#CDCDB8')
@@ -27,11 +32,15 @@ $('.boxs').one('click', function (event) {
                 title: "Congratulations Player  " + $("#0").text() + " WINS",
                 timer: 3000
             })
+
             $(".boxs").off('click');
         } else if (($("#3").text() === $("#4").text()) && ($("#3").text() === $("#5").text()) && ($("#3").text() !== "")) {
             $('#3,#4,#5').css('background', '#CDCDB8')
             $('Audio#wi')[0].play()
             endGame = false
+            // let printaz = $('#0').html()
+            // pla [printaz]++
+            // $(`#${printaz}`).html(`player ${printaz} s ${pla[printaz]}`)
             Swal.fire({
                 title: "Congratulations Player  " + $("#3").text() + " WINS",
                 timer: 3000
