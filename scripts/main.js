@@ -24,6 +24,7 @@ $('.boxs').one('click', function (event) {
     }
 
     function checkWin() {
+        // if statement check winne
         if (($("#0").text() === $("#1").text()) && ($("#0").text() === $("#2").text()) && ($("#0").text() !== "")) {
             $('#0,#1,#2').css('background', '#CDCDB8')
             $('Audio#wi')[0].play()
@@ -100,7 +101,9 @@ $('.boxs').one('click', function (event) {
                 timer: 3000
             })
             $(".boxs").off('click');
-        } else if (counter == 9) {
+        }
+        // Tie statement  
+        else if (counter == 9) {
             $('Audio#wi')[0].play()
             endGame = false
             Swal.fire({
@@ -111,6 +114,7 @@ $('.boxs').one('click', function (event) {
     }
     checkWin()
 })
+// rest func 
 $("#rest").click(function () {
     location.reload(true);
 })
