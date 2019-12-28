@@ -9,9 +9,9 @@
      * JavaScript 
      * Jquery
      * SweetAlert
-     * Git;
-     * GitHub;
-     * Google Fonts;
+     * Git
+     * GitHub
+     * Google Fonts
 
 <!-- Technologies tools -->
 ## Planning and Development Process
