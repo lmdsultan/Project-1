@@ -21,6 +21,7 @@ $('.boxs').one('click', function (event) {
     } else {
         $(event.target).text('O')
         $('Audio#xs')[0].play()
+
     }
 
     function checkWin() {
@@ -33,7 +34,6 @@ $('.boxs').one('click', function (event) {
                 title: "Congratulations Player  " + $("#0").text() + " WINS",
                 timer: 3000
             })
-
             $(".boxs").off('click');
         } else if (($("#3").text() === $("#4").text()) && ($("#3").text() === $("#5").text()) && ($("#3").text() !== "")) {
             $('#3,#4,#5').css('background', '#CDCDB8')

@@ -64,13 +64,28 @@ body{
     cursor: pointer;
     align-self: center;
 }
-/* #score{
+.winnerSccor{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  }
+  .winnerSccor div{
+    width: 100%;
+    border-radius: 10%;
     text-align: center;
-    background: #185385;
-    font-size: 50px;
-    color: #8AAECD;
-    font-family: 'Teko', sans-serif;
-}  */
+    font-size: 40px;
+    margin: 10px;
+    background-color: #c1b6ed;
+    color: black;
+    font-family: 'Bowlby One SC', cursive;
+    font-weight: bolder;
+    padding-top: 20px;
+  }
+
+
 @media (max-width: 600px){
 body{
     background: black;
